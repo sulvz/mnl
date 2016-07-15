@@ -2,6 +2,7 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: localhost
 
 development:
   <<: *default
@@ -15,4 +16,4 @@ production:
   <<: *default
   database: mnl24_production
   username: mnl24
-  password: ghjtrnbhjdfybt1980
+  password: <%= ENV['MNL24_DATABASE_PASSWORD'] %>
