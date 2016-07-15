@@ -24,6 +24,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'dotenv-rails'
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
@@ -34,7 +35,7 @@ group :development do
   gem 'capistrano-rails', '~> 1.1.1'
   gem 'capistrano-rbenv', github: "capistrano/rbenv"
 
-  gem 'dotenv-rails'
+
 
 end
 
