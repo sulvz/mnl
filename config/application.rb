@@ -6,6 +6,11 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+if %w[test development].include?(Rails.env)
+  require 'dotenv'
+  Dotenv.load
+end
+
 module Mnl24
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
